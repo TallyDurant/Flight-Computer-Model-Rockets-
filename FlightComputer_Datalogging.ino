@@ -1,34 +1,4 @@
-/*MODEL ROCKET FLIGHT COMPUTER
 
- * Note that much of the IMU Code derives from Jeff Rowberg's MPU6050 Demo Code, the copyright statement and liscense are included
- * 
- */
- //Changelog
- //12-29-2019 Created Program to test buzzer on Pin 3, tested library inclusion
- //01-04-2020 Finished hardware, wrote datalogging capability for temp and pressure
- //01-05-2020 Created datalogging program that includes modes and IMU data
- //01-07-2020 Implemented linear acceleration datalogging, ran into FIFO overflow issues
- //01-09-2020 Implemented angular position datalogging, yet to resolve FIFO overflow issues
- //01-18-2020 Added dataRate variable to set ideal number of data points per second
- //02-08-2020 Modified code to make better use of preprocessor directives in place of variables, effect on memory is minimal
- //05-21-2020 Added additional comments and clarifications in preparation for publication on Instructables
-/* ============================================
-I2Cdev device library code is placed under the MIT license
-Copyright (c) 2012 Jeff Rowberg
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-
-===============================================
-*/
 
 #include <SD.h>           //includes SD card library for datalogging
 #include <Wire.h>         //includes Wire.h library for I2C interface
